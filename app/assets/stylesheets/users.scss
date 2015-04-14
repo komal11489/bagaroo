@@ -1,0 +1,28 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.TFtable {
+	width: 100%;
+	border-collapse: collapse;
+	td {
+		padding: 7px;
+		
+	}
+	th
+	{
+	text-align:left;
+	background-color: "#b3b3b3";
+	padding: 7px;
+	font-style: italic;
+	font-size:130%;
+	}
+	tr {
+		
+		&:nth-child(odd) {
+			background: #FE2E2E;
+		}
+		&:nth-child(even) {
+			background: #0fff;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<% if bug == @current_bug %>
+<div id="current_bug" class="article">
+<% else %>
+<div class="article">
+<% end %>
+  <div class="bug_title"> <%= bug.title %> </div>
+    <div class="article_info">
+       
+        <span class="bug_username"> By <%=  (bug.user.try(:full_name) || "NA") %> </span>
+    </div>
+    <div class="bug_description"> <%= bug.description %> </div>
+    Type :: <span><%= bug.issue_type %></span>
+     , Priority :: <span><%= bug.priority %></span>
+      , Status :: <span><%= bug.status %></span>
+      <div class="actions">
+        <%= link_to 'Show', bug %>
+        <%= link_to 'Edit', edit_bug_path(bug) , remote: true %>
+        <%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' } , remote: true %>
+      </div>
+</div>

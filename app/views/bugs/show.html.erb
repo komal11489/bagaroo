@@ -1,0 +1,37 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<p>
+<strong>Author:</strong>
+<%= (@bug.user.try(:full_name) || "NA")%>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @bug.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bug.description %>
+</p>
+
+<p>
+  <strong>Issue type:</strong>
+  <%= @bug.issue_type %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @bug.priority %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @bug.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_bug_path(@bug) %> |
+
+<%= link_to 'Back', bugs_path %>
+

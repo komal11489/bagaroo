@@ -1,0 +1,29 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @user.fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @user.lname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Thumbnail:</strong>
+  <%= @user.thumbnail %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+
+<%= link_to 'Back', users_path %>
+
